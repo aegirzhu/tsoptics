@@ -1,0 +1,281 @@
+/* * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+} */
+
+/* "Tamming" Box Model With Reset */
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* Universal Styles */
+
+html {
+  font-size: 18px;
+}
+
+body {
+  font-family: "Helvetica", sans-serif;
+  line-height: 1.4;
+}
+
+h1,
+h4 {
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 2rem;
+  line-height: 1.2;
+}
+
+h4{
+  font-size: 1rem;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+/* header */
+header {
+  background-image: url("../images/glasses-bg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 31rem;
+}
+
+header nav {
+  background-color: cadetblue;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  position: relative;
+  top: 1rem;
+  font-size: 1rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 1.5rem;
+  padding-right: 1rem;
+}
+
+.menu ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu li {
+  padding-left: 2rem;
+}
+
+.menu .mobile-menu {
+  display: none;
+}
+
+.banner {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.headline {
+  position: relative;
+  top: 10rem;
+  right: -2rem;
+  padding: 1.5rem 5rem;
+  background-color: white;
+  color: black;
+}
+
+.banner h1 {
+  font-size: 2rem;
+  line-height: 1.2;
+  margin: 0;
+}
+
+/* features style */
+.features {
+  display: flex;
+  justify-content: center;
+  margin: 3rem auto;
+}
+
+.feature-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 8rem;
+  width: 5rem;
+  text-align: center;
+}
+
+.feature-item img{
+  width: 5rem;
+}
+
+.features .middle {
+  margin: auto 6rem;
+}
+
+.feature-item .paper-img {
+  width: 3.5rem;
+}
+
+/* p&a style */
+.phi-and-app {
+  display: flex;
+  justify-content: center;
+  align-content: flex-start;
+  margin-bottom: 5rem;
+}
+
+.phi-and-app .info {
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+  width: 35%;
+}
+
+.phi-and-app .info .title {
+  background-color: cadetblue;
+  color: white;
+  width: 12rem;
+  padding-left: 1.25rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+
+.philosophy {
+  margin-right: 5%;
+}
+
+/* footer style */
+.footer-logo {
+  background-color: azure;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 4rem 4rem;
+}
+
+.footer-logo img {
+  height: 1.5rem;
+}
+
+footer span {
+  margin-left: 1rem;
+}
+/* media query for tablet  */
+@media only screen and (max-width: 1024px) {
+  /* header bar snap to the top */
+  header {
+    height: 22rem;
+  }
+
+  header .container {
+    margin: 0;
+    width: 100%;
+    top: 0;
+  }
+
+  /* banner changes style */
+  .banner .headline {
+    right: 2rem;
+    top:5rem;
+    padding: 0.75rem 4rem;
+  }
+  .headline h1 {
+    font-size: 1.33rem;
+  }
+}
+
+/* media query for mobile  */
+@media only screen and (max-width: 560px) {
+  /* nav change menu */
+  nav .logo span {
+    display: none;
+  }
+  nav .menu ul {
+    display: none;
+  }
+  nav .menu .mobile-menu {
+    display: flex;
+  }
+  /* change background position */
+  header {
+    background-position: 20%;
+    height: 17rem;
+  }
+
+  /* change banner width */
+  header .banner .headline {
+    margin-top: 3rem;
+    padding: 1rem auto;
+    left: 0;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 1rem;
+  }
+  /* features change direction */
+  .features {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 3.77rem auto;
+  }
+  .features .middle {
+    margin: 1.54rem auto;
+  }
+
+  .features .feature-item {
+    height: 7rem;
+  }
+  .features .description {
+    font-size: 0.77rem;
+  }
+
+  /* philosophy and appointment change style */
+  .phi-and-app {
+    flex-direction: column;
+    margin-bottom: 0;
+  }
+  .phi-and-app .info {
+    width: 100%;
+    margin-bottom: 4rem;
+  }
+  .phi-and-app .info .title {
+    width: 100%;
+  }
+  .phi-and-app p {
+    font-size: 0.77rem;
+  }
+
+  /* footer change style */
+  footer span {
+    display: none;
+  }
+
+  .footer-logo {
+    justify-content: center;
+  }
+}
