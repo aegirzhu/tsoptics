@@ -186,14 +186,16 @@ footer span {
 }
 /* media query for tablet  */
 @media only screen and (max-width: 1024px) {
+  /* container taking 100% screen size */
+  .container {
+    max-width: 100%;
+  }
   /* header bar snap to the top */
   header {
     height: 22rem;
   }
 
-  header .container {
-    margin: 0;
-    width: 100%;
+  header nav {
     top: 0;
   }
 
